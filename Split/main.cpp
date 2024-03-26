@@ -13,19 +13,14 @@ void main()
 	int Array[SIZE];
 	int n = 0;
 	int m = 0;
-	int & rn = n;
-	int & rm = m;
 	int* even = new int [n];
 	int* odd = new int [m];
 	Rand(Array, SIZE);
-	for (int i = 0; i < SIZE; i++)
-	{
-		if ((Array[i] & 1) == 0)push_back(even, rn, Array[i]);
-		else push_back(odd, rm, Array[i]);
-	}
-	cout << n << " " << m << endl;
+	for (int i = 0; i < SIZE; i++) (Array[i] & 1) == 0 ? push_back(even, n, Array[i]) : push_back(odd, m, Array[i]);
 	Print(even, n);
 	Print(odd, m);
+	delete[] even;
+	delete[] odd;
 
 }
 void Rand(int Array[], int SIZE)
