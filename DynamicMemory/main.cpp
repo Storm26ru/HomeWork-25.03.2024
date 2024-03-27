@@ -28,8 +28,7 @@ void main()
 	pop_back(arr, size);
 	pop_front(arr, size);
 	erase(arr, size);
-
-
+	delete[] arr;
 }
 void Print(int*& arr, int size)
 {
